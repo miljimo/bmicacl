@@ -1,0 +1,29 @@
+﻿<!--
+* @Author : Obaro I. Johnson
+    
+* $Log: vsrc/Translator/Resources/Themes/Theme/Colors/ThemeSecondaryColors.xaml  $
+* Revision 1.1 2018/03/21 17:13:39GMT Obaro Johnson (ojohnson) 
+* Initial revision
+* Member added to project /EMEA/Fire Detection/Panel Translator/Source/project.pj
+
+-->
+    <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <!-- Region (Secondary Colors)-->
+    <Color x:Key="SecondaryColor">#4da6ff</Color>
+    <SolidColorBrush x:Key="SecondaryColorBrush" Color="{StaticResource SecondaryColor}" />
+
+    <Color x:Key="SecondaryLightColor">#80bfff</Color>
+    <SolidColorBrush x:Key="SecondaryLightColorBrush" Color="{StaticResource SecondaryLightColor}" />
+
+    <Color x:Key="SecondaryDarkColor">#1a8cff</Color>
+    <SolidColorBrush x:Key="SecondaryDarkColorBrush" Color="{StaticResource SecondaryDarkColor}" />
+
+    <Color x:Key="SecondaryTextColor">#ffffff</Color>
+    <SolidColorBrush x:Key="SecondaryTextColorBrush"     Color="{StaticResource SecondaryTextColor}" />
+
+</ResourceDictionary>
+
+<!-- End of file -->

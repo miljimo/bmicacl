@@ -1,0 +1,38 @@
+﻿<!--
+* @Author : Obaro I. Johnson
+    
+* $Log: vsrc/Translator/Resources/Themes/Theme/Colors/ThemePushButtonColors.xaml  $
+* Revision 1.1 2018/03/21 17:13:28GMT Obaro Johnson (ojohnson) 
+* Initial revision
+* Member added to project /EMEA/Fire Detection/Panel Translator/Source/project.pj
+
+-->
+    <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="ButtonBackgroundColor">Transparent</Color>
+    <SolidColorBrush x:Key="ButtonBackgroundColorBrush"
+                     Color="{StaticResource ButtonBackgroundColor}" />
+
+    <Color x:Key="ButtonHoverBackgroundColor">#00a3cc</Color>
+    <SolidColorBrush x:Key="ButtonHoverBackgroundColorBrush"
+                     Color="{StaticResource ButtonHoverBackgroundColor}" />
+
+
+    <Color x:Key="ButtonBorderColor">#66e0ff</Color>
+    <SolidColorBrush x:Key="ButtonBorderColorBrush"
+                     Color="{StaticResource ButtonBorderColor}" />
+
+
+    <Color x:Key="ButtonBackgroundTextColor">#331a00</Color>
+    <SolidColorBrush x:Key="ButtonBackgroundTextColorBrush"
+                     Color="{StaticResource ButtonBackgroundTextColor}" />
+
+    <Color x:Key="ButtonHoverBackgroundTextColor">#e6faff</Color>
+    <SolidColorBrush x:Key="ButtonHoverBackgroundTextColorBrush"
+                     Color="{StaticResource ButtonHoverBackgroundTextColor}" />
+    
+
+</ResourceDictionary>
+
+<!-- End of file -->

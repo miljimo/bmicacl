@@ -1,0 +1,63 @@
+﻿<!--
+* @Author : Obaro I. Johnson
+    
+* $Log: vsrc/Translator/Resources/Themes/Theme/Colors/ThemeDataGridColors.xaml  $
+* Revision 1.1 2018/03/21 17:12:39GMT Obaro Johnson (ojohnson) 
+* Initial revision
+* Member added to project /EMEA/Fire Detection/Panel Translator/Source/project.pj
+
+-->
+    <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="DataGridColumnHeaderBackgroundColor">#e1e7ea</Color>
+    <SolidColorBrush x:Key="DataGridColumnHeaderBackgroundColorBrush"
+                     Color="{StaticResource DataGridColumnHeaderBackgroundColor}" />
+
+    <Color x:Key="DataGridColumnHeaderBorderColor">#b4c3cb</Color>
+    <SolidColorBrush x:Key="DataGridColumnHeaderBorderColorBrush"
+                     Color="{StaticResource DataGridColumnHeaderBorderColor}" />
+
+
+    <Color x:Key="DataGridColumnHeaderTextColor" >#2c3a3a</Color>
+    <SolidColorBrush x:Key="DataGridColumnHeaderTextColorBrush"    
+                     Color="{StaticResource DataGridColumnHeaderTextColor}" />
+    
+    
+    <!--Row Colors -->
+
+    <Color x:Key="DataGridRowBackgroundColor">#EEF2F3</Color>
+    <SolidColorBrush x:Key="DataGridRowBackgroundColorBrush"    
+                     Color="{StaticResource DataGridRowBackgroundColor}" />
+    <Color x:Key="DataGridRowMouseOverBackgroundColor">#cceeff</Color>
+    <SolidColorBrush x:Key="DataGridRowMouseOverBackgroundColorBrush"    
+                     Color="{StaticResource DataGridRowMouseOverBackgroundColor}" />
+
+    <Color x:Key="DataGridRowMouseOverBackgroundTextColor">#002233</Color>
+    <SolidColorBrush x:Key="DataGridRowMouseOverBackgroundTextColorBrush"    
+                     Color="{StaticResource DataGridRowMouseOverBackgroundTextColor}" />
+
+
+    <Color x:Key="DataGridAlternationRowBackgroundColor">#fefefe</Color>
+    <SolidColorBrush x:Key="DataGridAlternationRowBackgroundColorBrush"    
+                     Color="{StaticResource DataGridAlternationRowBackgroundColor}" />
+
+   
+    <SolidColorBrush x:Key="DataGridAlternationRowMouseOverBackgroundColorBrush"    
+                     Color="{StaticResource DataGridRowMouseOverBackgroundColor}" />
+    
+    <SolidColorBrush x:Key="DataGridAlternationRowMouseOverBackgroundTextColorBrush"    
+                     Color="{StaticResource DataGridRowMouseOverBackgroundTextColor}" />
+
+
+    <Color x:Key="DataGridSelectedRowBackgroundColor">#80d4ff</Color>
+    <SolidColorBrush x:Key="DataGridSelectedRowBackgroundColorBrush"    
+                     Color="{StaticResource DataGridSelectedRowBackgroundColor}" />
+
+
+    <Color x:Key="DataGridSelectedRowBackgroundTextColor">#00334d</Color>
+    <SolidColorBrush x:Key="DataGridSelectedRowBackgroundTextColorBrush"    
+                     Color="{StaticResource DataGridSelectedRowBackgroundTextColor}" />
+</ResourceDictionary>
+
+<!-- End of file -->
