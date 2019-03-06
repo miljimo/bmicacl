@@ -25,6 +25,16 @@ namespace BMIApp
         public MainWindow()
         {
             InitializeComponent();
+            MouseLeftButtonDown += MainWindow_MouseLeftButtonDown;
         }
+
+        private void MainWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
+        }
+
     }
 }

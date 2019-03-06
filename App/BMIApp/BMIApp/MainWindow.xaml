@@ -7,18 +7,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
+        xmlns:app="clr-namespace:BMIApp"
         ResizeMode="NoResize"
         Style="{StaticResource WindowStyle}"
         xmlns:local="clr-namespace:BMIApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
 
+
+    <views:BaseWindow.Resources>
+ 
+    </views:BaseWindow.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2" ></ColumnDefinition>
-            <ColumnDefinition Width="8"></ColumnDefinition>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="8*"/>
         </Grid.ColumnDefinitions>
+        <app:SideNavBar DataContext="{Binding Navigator}" Grid.Column="0"/>
+        <StackPanel Background="White" Grid.Column="1">
+            <TextBox  Style="{StaticResource TextBoxStyle}" HorizontalAlignment="Stretch"/>
+            <TextBox  Style="{StaticResource TextBoxStyle}" Width="150"/>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Calculate" Style="{StaticResource PushButtonStyle}"/>
+                <Button Content="Save"     Style="{StaticResource PushButtonStyle}"/>
+            </StackPanel>
+           
+        </StackPanel>
 
-        <Label>Hello World</Label>
     </Grid>
+
 </views:BaseWindow>

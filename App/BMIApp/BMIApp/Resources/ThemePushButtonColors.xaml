@@ -19,12 +19,12 @@
                      Color="{StaticResource ButtonHoverBackgroundColor}" />
 
 
-    <Color x:Key="ButtonBorderColor">#66e0ff</Color>
+    <Color x:Key="ButtonBorderColor">Transparent</Color>
     <SolidColorBrush x:Key="ButtonBorderColorBrush"
                      Color="{StaticResource ButtonBorderColor}" />
 
 
-    <Color x:Key="ButtonBackgroundTextColor">#331a00</Color>
+    <Color x:Key="ButtonBackgroundTextColor">#FFFFFF</Color>
     <SolidColorBrush x:Key="ButtonBackgroundTextColorBrush"
                      Color="{StaticResource ButtonBackgroundTextColor}" />
 
