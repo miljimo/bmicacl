@@ -100,6 +100,7 @@
     <Compile Include="Converters.cs" />
     <Compile Include="Converters\BasePageConverter.cs" />
     <Compile Include="Converters\BaseValueConverter.cs" />
+    <Compile Include="Converters\DoubleToStringConverter.cs" />
     <Compile Include="MBICreateOverview.xaml.cs">
       <DependentUpon>MBICreateOverview.xaml</DependentUpon>
     </Compile>
@@ -110,6 +111,7 @@
       <DependentUpon>SideNavBar.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\BMICalculatorViewModel.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />
     <Compile Include="Views\BaseWindow.cs" />
     <Compile Include="Views\NavidationButton.cs" />
@@ -133,7 +135,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Resources\colors.xaml">
+    <Page Include="Resources\converters.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

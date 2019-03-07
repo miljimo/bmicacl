@@ -11,7 +11,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
 
-    <Color x:Key="BackgroundColor">#F7F9F9</Color>
+    <Color x:Key="BackgroundColor">#FFFFFF</Color>
     <SolidColorBrush x:Key="BackgroundColorBrush"
                      Color="{StaticResource BackgroundColor}" />
     <!-- Background Light-->

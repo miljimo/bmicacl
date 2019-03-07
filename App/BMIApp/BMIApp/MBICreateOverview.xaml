@@ -13,10 +13,12 @@
                 Style="{StaticResource DashboardStyle}">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="5*"/>
-                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="0">
+                    <Border Grid.Column="0"  
+                            Margin="0 0 0 15" >
+                    <Grid>
 
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
@@ -24,26 +26,41 @@
                         </Grid.ColumnDefinitions>
 
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="35"/>
+                            <RowDefinition Height="35"/>
+                            <RowDefinition Height="35"/>
                         </Grid.RowDefinitions>
-
                         <Label Content="Height" Grid.Column="0" Grid.Row="0" 
                                VerticalAlignment="Center"
+                               Margin="0"
+                               Padding="0"
                                HorizontalAlignment="Stretch"/>
-                        <TextBox Grid.Column="1" Grid.Row="0" Style="{StaticResource TextBoxStyle}"
-                          Width="160"/>
+                        <TextBox Grid.Column="1" 
+                                 Grid.Row="0" 
+                                 HorizontalAlignment="Right"
+                                 Style="{StaticResource TextBoxStyle}"
+                          Width="100"/>
                         <Label Content="Weight" 
+                               Margin="0"
+                               Padding="0"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Stretch"
                                Grid.Column="0"
                                Grid.Row="1"/>
-                        <TextBox  Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBoxStyle}" 
-                          Width="50"/>
+                        <TextBox  Grid.Column="1" Grid.Row="1" 
+                                  HorizontalAlignment="Right"
+                                  Style="{StaticResource TextBoxStyle}" 
+                          Width="70"/>
                         
+                        <Button Content="Add Record"
+                                Grid.Column="1" 
+                                Grid.Row="2" 
+                                HorizontalAlignment="Right"
+                                Style="{StaticResource PushButtonStyle}"/>
                         
                     </Grid>
-
+                    </Border>
+                    
                     <Border CornerRadius="100" 
                         Grid.Column="1"
                         BorderBrush="{StaticResource PrimaryDarkColorBrush}"
@@ -59,14 +76,12 @@
                            Foreground="{StaticResource SecondaryTextColorBrush}"
                            FontStyle="Normal"
                            FontFamily="{StaticResource FontAwesome}"
-                           Content="67.89"/>
+                           Content="{Binding Result, Converter={StaticResource DoubleToStringConverter}}"/>
                 </Border>
                     
                     
                 </Grid>
-                <StackPanel Orientation="Horizontal">
-                    <Button Content="Persist Record"     Style="{StaticResource PushButtonStyle}"/>
-                </StackPanel>
+               
 
             </StackPanel>
 

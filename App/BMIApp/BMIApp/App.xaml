@@ -9,6 +9,7 @@
        
         <ResourceDictionary >
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary  Source="./Resources/converters.xaml"/>
                 <ResourceDictionary  Source="./Resources/ThemePrimaryColors.xaml"/>
                 <ResourceDictionary  Source="./Resources/ThemeSecondaryColors.xaml"/>
                 <ResourceDictionary  Source="./Resources/ThemeBackgroundColors.xaml"/>
@@ -16,7 +17,7 @@
                 <ResourceDictionary  Source="./Resources/ThemeDataGridColors.xaml"/>
                 <ResourceDictionary  Source="./Resources/AwesomeFonts.xaml"/>
                 <ResourceDictionary  Source="./Resources/WindowStyle.xaml"/>
-
+               
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 

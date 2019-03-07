@@ -76,8 +76,24 @@
                         
                     </Grid>
                     
-                    <Grid Grid.Column="1">
+                    <Grid Grid.Column="1" Background="{StaticResource BackgroundDarkColorBrush}">
 
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="8*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <Label Content="Welcome Mr. Obaro"  Grid.Column="0"/>
+
+                        <StackPanel Grid.Column="1" HorizontalAlignment="Right">
+                            
+                            <Button Content="X"
+                                    Style="{StaticResource WindowButtonsStyle}"
+                                    Height="45"
+                                    HorizontalContentAlignment="Center"
+                                    VerticalContentAlignment ="Center"
+                                    Width="{Binding Path=ActualHeight, RelativeSource={RelativeSource Self}}" />
+                        </StackPanel>
                     </Grid>
 
                 </Grid>
@@ -91,7 +107,7 @@
         </Grid.ColumnDefinitions>
         <app:SideNavBar DataContext="{Binding Navigator}" Grid.Column="0"/>
         <app:MBICreateOverview DataContext="{Binding DynamicContent}" Grid.Column="1"/>
-        </Grid>
+    </Grid>
     </Grid>
 
 </views:BaseWindow>

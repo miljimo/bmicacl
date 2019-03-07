@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ViewModels;
 
 namespace BMIApp
 {
@@ -22,7 +23,9 @@ namespace BMIApp
     {
         public MBICreateOverview()
         {
+            DataContext = new BMICalculatorViewModel();
             InitializeComponent();
+           
         }
     }
 }

@@ -335,6 +335,72 @@
         </Setter>
     </Style>
 
+
+    <Style x:Key="WindowButtonsStyle" TargetType="{x:Type Button}"  >
+        <Setter Property="Background" Value="{StaticResource BackgroundDarkColorBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource BackgroundTextColorBrush}"/>
+        <Setter Property="Width" Value="45" />
+        <Setter Property="Height" Value="{Binding RelativeSource={RelativeSource Self}, Path= Width}"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="17"/>
+        <Setter Property="FontFamily" Value="{StaticResource FontAwesome}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}" >
+                    <Border 
+                        Margin="{TemplateBinding Margin}"
+                        CornerRadius="0"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        Padding="{TemplateBinding Padding}"                            
+                        Background="{TemplateBinding Background}" >
+
+                        <ContentControl Content="{TemplateBinding Content}" 
+                                            VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                                            HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                            VerticalContentAlignment  ="{TemplateBinding VerticalContentAlignment}"
+                                            HorizontalAlignment="{TemplateBinding HorizontalAlignment}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Cursor" Value="Arrow"/>
+        <Style.Triggers>
+            <Trigger Property="Button.IsMouseOver" Value="True">
+                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="FontSize" Value="21"/>
+            </Trigger>
+
+            <EventTrigger RoutedEvent="Button.MouseEnter">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"
+                                        Duration="0:0:0.100"
+                                        To="{StaticResource BackgroundColor}"/>
+                        <DoubleAnimation Storyboard.TargetProperty="FontSize"  Duration="0:0:0.100" To="15"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+
+            <EventTrigger RoutedEvent="Button.MouseLeave">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimation Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"
+                                        Duration="0:0:0.100"
+                                        To="{StaticResource BackgroundDarkColor}"/>
+                        <DoubleAnimation Storyboard.TargetProperty="FontSize"  Duration="0:0:0.100" To="12" />
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+
+    
+
     <Style TargetType="{x:Type Grid}" x:Key="ToolbarStyle">
         <Setter Property="Background"  Value="{StaticResource BackgroundColorBrush}" />
 
