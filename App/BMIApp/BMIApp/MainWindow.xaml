@@ -16,11 +16,7 @@
 
 
     <views:BaseWindow.Resources>
-        <Style TargetType="{x:Type Grid}" x:Key="ToolbarStyle">
-            <Setter Property="Background"  Value="{StaticResource BackgroundColorBrush}" />
-            
-            
-        </Style>
+       
     </views:BaseWindow.Resources>
     <Grid Style="{StaticResource ToolbarStyle}">
         <Grid.RowDefinitions>
@@ -94,17 +90,8 @@
             <ColumnDefinition Width="8*"/>
         </Grid.ColumnDefinitions>
         <app:SideNavBar DataContext="{Binding Navigator}" Grid.Column="0"/>
-        <StackPanel Background="White" Grid.Column="1">
-            <TextBox  Style="{StaticResource TextBoxStyle}" HorizontalAlignment="Stretch"/>
-            <TextBox  Style="{StaticResource TextBoxStyle}" Width="150"/>
-            <StackPanel Orientation="Horizontal">
-                <Button Content="Calculate" Style="{StaticResource PushButtonStyle}"/>
-                <Button Content="Save"     Style="{StaticResource PushButtonStyle}"/>
-            </StackPanel>
-           
-        </StackPanel>
-
-    </Grid>
+        <app:MBICreateOverview DataContext="{Binding DynamicContent}" Grid.Column="1"/>
+        </Grid>
     </Grid>
 
 </views:BaseWindow>

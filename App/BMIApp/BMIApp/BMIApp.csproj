@@ -100,6 +100,9 @@
     <Compile Include="Converters.cs" />
     <Compile Include="Converters\BasePageConverter.cs" />
     <Compile Include="Converters\BaseValueConverter.cs" />
+    <Compile Include="MBICreateOverview.xaml.cs">
+      <DependentUpon>MBICreateOverview.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\IBMICalculator.cs" />
     <Compile Include="Models\IParameterBag.cs" />
     <Compile Include="Models\ParameterBag.cs" />
@@ -122,6 +125,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MBICreateOverview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resources\AwesomeFonts.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
