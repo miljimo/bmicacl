@@ -12,12 +12,10 @@ namespace ViewModels
     public  class BaseViewModel
     {
         private ResourceDictionary _Res;
-
-        BaseViewModel(ResourceDictionary Res)
+        public  BaseViewModel(ref ResourceDictionary Res)
         {
-
+            _Res = Res;
         }
-
         /// <summary>
         ///  Get the application resource object.
         /// </summary>

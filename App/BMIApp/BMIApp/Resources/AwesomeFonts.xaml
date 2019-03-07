@@ -18,6 +18,8 @@
     </FontFamily>
     <sys:Double x:Key="DefaultFontSize">12</sys:Double>
     <Thickness Bottom="0" Top="0" Left="0" Right="0" x:Key="DefaultWindowPadding" />
+    <BitmapImage x:Key="MyImageSource" UriSource="./Images/checkup.png" />
+  
 </ResourceDictionary>
 
 <!-- End of file -->
