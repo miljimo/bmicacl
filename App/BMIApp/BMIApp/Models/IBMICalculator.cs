@@ -53,33 +53,4 @@ namespace BMIApp.Models
     }
 
 
-
-
-    public class BMICalculator : IBMICalculator
-    {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="mass"></param>
-        /// <param name="height"></param>
-        /// <returns></returns>
-        public double Calculate(double mass, double height)
-        {
-            double result = 0;
-
-            try
-            {
-                result = mass / height;
-            }
-            catch(Exception err)
-            {
-                throw err;
-            }
-
-            return result;
-        }
-    }
-
-
-
 }

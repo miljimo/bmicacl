@@ -7,107 +7,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
-        xmlns:app="clr-namespace:BMIApp"
+      
         ResizeMode="NoResize"
         Style="{StaticResource WindowStyle}"
         xmlns:local="clr-namespace:BMIApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
 
-
-    <views:BaseWindow.Resources>
-       
-    </views:BaseWindow.Resources>
-    <Grid Style="{StaticResource ToolbarStyle}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="45"/>
-            <RowDefinition Height="8*"/>
-        </Grid.RowDefinitions>
-    <Grid Grid.Row="0">
-                  <Border BorderBrush="{StaticResource PrimaryDarkColorBrush}"
-                        Grid.Column="0" Grid.Row="0"
-                        BorderThickness="0 0 0 0">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="8*"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Grid Grid.Column="0" 
-                          VerticalAlignment="Stretch"
-                          HorizontalAlignment="Stretch"
-                          Height="45"
-                          Background="{StaticResource PrimaryDarkColorBrush}">
-
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="2*"/>
-                            <ColumnDefinition Width="8*"/>
-                        </Grid.ColumnDefinitions>
-                        <!-- The Title Area-->
-
-                        <Image
-                            Grid.Column="0"
-                            Source="{StaticResource MyImageSource}" 
-                            Width="25" Height="25"/>
-                        
-                        <StackPanel Orientation="Horizontal"  Grid.Column="1">
-                            <Label Foreground="{StaticResource SecondaryTextColorBrush}" 
-                               FontFamily="{StaticResource FontAwesome}"
-                               FontWeight="DemiBold"
-                               MaxHeight="45"                               
-                               VerticalContentAlignment="Center"
-                               FontSize="27" Content="B"/>
-                            <Label Foreground="{StaticResource SecondaryDarkColorBrush}" 
-                               FontFamily="{StaticResource FontAwesome}"
-                               FontWeight="DemiBold"
-                               MaxHeight="45"
-                               FontStyle="Italic"
-                               VerticalContentAlignment="Center"
-                               FontSize="27" Content="M"/>
-
-                            <Label Foreground="{StaticResource SecondaryTextColorBrush}" 
-                               FontFamily="{StaticResource FontAwesome}"
-                               FontWeight="DemiBold"
-                               MaxHeight="45"
-                               VerticalContentAlignment="Center"
-                              FontSize="27" Content="I"/>
-                        </StackPanel>
-                       
-                        
-                    </Grid>
-                    
-                    <Grid Grid.Column="1" Background="{StaticResource BackgroundDarkColorBrush}">
-
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="8*"/>
-                            <ColumnDefinition Width="2*"/>
-                        </Grid.ColumnDefinitions>
-                        
-                        <Label Content="Welcome Mr. Obaro"  Grid.Column="0"/>
-
-                        <StackPanel Grid.Column="1" HorizontalAlignment="Right">
-                            
-                            <Button Content="X"
-                                    Style="{StaticResource WindowButtonsStyle}"
-                                    Height="45"
-                                    HorizontalContentAlignment="Center"
-                                    VerticalContentAlignment ="Center"
-                                    Width="{Binding Path=ActualHeight, RelativeSource={RelativeSource Self}}" />
-                        </StackPanel>
-                    </Grid>
-
-                </Grid>
-            </Border>
-           
-    </Grid>
-    <Grid Grid.Row="1">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="8*"/>
-        </Grid.ColumnDefinitions>
-        <app:SideNavBar DataContext="{Binding Navigator}" Grid.Column="0"/>
-        <app:MBICreateOverview DataContext="{Binding DynamicContent}" Grid.Column="1"/>
-    </Grid>
+    <Grid >
+        <ContentControl Content="{Binding Path=PageType , Converter={StaticResource MainWindowPageConverter}, Mode=TwoWay}" />
     </Grid>
 
 </views:BaseWindow>

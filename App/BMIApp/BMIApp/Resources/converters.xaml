@@ -5,5 +5,9 @@
     
    
     <!--Add all the informations  -->
+    
     <converters:DoubleToStringConverter x:Key="DoubleToStringConverter" />
+    <converters:MainWindowPageConverter x:Key="MainWindowPageConverter" />
+    <converters:DashboardPageConverter  x:Key="DashboardPageConverter" />
+    
 </ResourceDictionary>

@@ -100,10 +100,13 @@
     <Compile Include="Converters.cs" />
     <Compile Include="Converters\BasePageConverter.cs" />
     <Compile Include="Converters\BaseValueConverter.cs" />
+    <Compile Include="Converters\DashboardPageConverter.cs" />
     <Compile Include="Converters\DoubleToStringConverter.cs" />
-    <Compile Include="MBICreateOverview.xaml.cs">
-      <DependentUpon>MBICreateOverview.xaml</DependentUpon>
+    <Compile Include="Converters\MainWindowPageConverter.cs" />
+    <Compile Include="DashboardPage.xaml.cs">
+      <DependentUpon>DashboardPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\BaseProperty.cs" />
     <Compile Include="Models\IBMICalculator.cs" />
     <Compile Include="Models\IParameterBag.cs" />
     <Compile Include="Models\ParameterBag.cs" />
@@ -111,10 +114,19 @@
       <DependentUpon>SideNavBar.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\BaseViewModel.cs" />
-    <Compile Include="ViewModels\BMICalculatorViewModel.cs" />
+    <Compile Include="ViewModels\AddBMIViewModel.cs" />
+    <Compile Include="ViewModels\DashBoardModelView.cs" />
+    <Compile Include="ViewModels\MainModelView.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />
     <Compile Include="Views\BaseWindow.cs" />
+    <Compile Include="Views\Dashboards\AddBMIControl.xaml.cs">
+      <DependentUpon>AddBMIControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\NavidationButton.cs" />
+    <Page Include="DashboardPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -127,10 +139,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="MBICreateOverview.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Resources\AwesomeFonts.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -138,6 +146,10 @@
     <Page Include="Resources\converters.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resources\fonts.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -168,6 +180,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SideNavBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Dashboards\AddBMIControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

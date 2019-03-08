@@ -12,20 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using ViewModels;
 
 namespace BMIApp
 {
     /// <summary>
-    /// Interaction logic for MBICreateOverview.xaml
+    /// Interaction logic for DashboardPage.xaml
     /// </summary>
-    public partial class MBICreateOverview : UserControl
+    public partial class DashboardPage : UserControl
     {
-        public MBICreateOverview()
+        public DashboardPage()
         {
-            DataContext = new BMICalculatorViewModel();
             InitializeComponent();
-           
         }
     }
 }

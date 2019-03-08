@@ -9,6 +9,10 @@ namespace Converters
 {
     public class DoubleToStringConverter: BaseValueConverter<DoubleToStringConverter>
     {
+        public DoubleToStringConverter()
+        {
+        }
+
         /// <summary>
         ///  
         /// </summary>
@@ -19,9 +23,19 @@ namespace Converters
         /// <returns></returns>
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            string Result = "89";
+            double dbValue = (double)value;
+           string result  = dbValue.ToString();
 
-            return Result;
+            return result;
         }
+
+        public override object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            double result = 0;
+            Double.TryParse((string)(value), out result);
+            return result;
+
+        }
+
     }
 }

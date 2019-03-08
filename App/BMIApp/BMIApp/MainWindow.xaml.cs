@@ -22,7 +22,8 @@ namespace BMIApp
     /// </summary>
     public partial class MainWindow : BaseWindow
     {
-        public MainWindow()
+        public MainWindow():
+            base()
         {
             InitializeComponent();
             MouseLeftButtonDown += MainWindow_MouseLeftButtonDown;
