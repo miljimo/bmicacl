@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="BMIApplication.Views.SideNavBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BMIApplication.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    
+    <StackPanel Width="160"
+                    Background="{StaticResource PrimaryColorBrush}"
+                    HorizontalAlignment="Left">
+        <Button Style="{StaticResource NavigationButtonStyle}" HorizontalContentAlignment="Center">
+            BMI - Body Mass Index</Button>
+        <Button Style="{StaticResource NavigationButtonStyle}">View BMI Records</Button>
+        <Button Style="{StaticResource NavigationButtonStyle}" >Log Out</Button>
+        <Button Style="{StaticResource NavigationButtonStyle}" >Log In</Button>
+        <Button Style="{StaticResource NavigationButtonStyle}" >Exit Application</Button>
+    </StackPanel>
+</UserControl>

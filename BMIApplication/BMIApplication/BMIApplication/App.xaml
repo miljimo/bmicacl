@@ -1,0 +1,23 @@
+﻿<Application x:Class="BMIApplication.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:BMIApplication">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="./Resources/Converter.xaml"/>
+                <ResourceDictionary Source="./Resources/DataTemplates.xaml"/>
+                
+                <ResourceDictionary  Source="./Resources/Fonts/AwesomeFonts.xaml"/>
+                <ResourceDictionary  Source="./Resources/Colors/ThemePrimaryColors.xaml"/>
+                <ResourceDictionary  Source="./Resources/Colors/ThemeSecondaryColors.xaml"/>
+                <ResourceDictionary  Source="./Resources/Colors/ThemeBackgroundColors.xaml"/>
+                <ResourceDictionary  Source="./Resources/Colors/ThemePushButtonColors.xaml"/>
+                <ResourceDictionary  Source="./Resources/Colors/ThemeDataGridColors.xaml"/>
+                <ResourceDictionary  Source="./Resources/Styles/TextBoxStyle.xaml"/>
+                <ResourceDictionary  Source="./Resources/Styles/WindowStyle.xaml"/>
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

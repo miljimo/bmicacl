@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:c="clr-namespace:BMIApplication.Converters"
+                    xmlns:local="clr-namespace:BMIApplication.Resources">
+
+
+
+    <!--Add all the informations  -->
+    <BooleanToVisibilityConverter x:Key="BoolToVisibilityConveter"/>
+    <c:InverseBoolConverter       x:Key="InverseBoolConverter"/>
+    <c:MainWindowPageConverter    x:Key="MainWindowPageConverter" />
+    <c:DashboardPageConverter     x:Key="DashboardPageConverter" />
+    <c:FloatToStringConverter     x:Key="FloatToStringConverter" />
+
+
+</ResourceDictionary>
