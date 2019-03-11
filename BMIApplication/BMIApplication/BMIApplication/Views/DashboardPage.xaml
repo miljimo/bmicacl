@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:BMIApplication.Views"
              mc:Ignorable="d" 
              DataContext="{Binding}"
+             x:Name="Self"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Style="{StaticResource ToolbarStyle}">
         <Grid.RowDefinitions>
@@ -79,6 +80,8 @@
                             <Button Content="X"
                                     Style="{StaticResource WindowButtonsStyle}"
                                     Height="45"
+                                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorLevel=1, AncestorType=Window}}"
+                                    Command="{Binding CloseWindowCommand}"
                                     HorizontalContentAlignment="Center"
                                     VerticalContentAlignment ="Center"
                                     Width="{Binding Path=ActualHeight, RelativeSource={RelativeSource Self}}" />

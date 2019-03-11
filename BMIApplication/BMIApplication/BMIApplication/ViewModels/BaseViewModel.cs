@@ -14,7 +14,48 @@ namespace BMIApplication.ViewModels
 
     public class BaseViewModel :BasePropertyChangedEvent
     {
+        private IRespositoryManager respositoryManager;
+        private ICommand            closeWindowCommand;
 
+        public BaseViewModel()
+        {
+            respositoryManager = IoC.RespositoryManager;
+        }
+
+        public ICommand CloseWindowCommand
+        {
+            get
+            {
+                return closeWindowCommand ?? (closeWindowCommand = CreateCommand<Window>(OnCloseWindow));
+            }
+        }
+
+        private void OnCloseWindow(Window window)
+        {
+            if (window != null)
+            {
+                window.Close();
+            }
+        }
+
+        /// <summary>
+        ///  The function will be use to load all the repos.
+        /// </summary>
+        public IRespositoryManager Respositories
+        {
+            get
+            {
+                return respositoryManager;
+            }
+            protected set
+            {
+                if(respositoryManager != value)
+                {
+                    respositoryManager = value;
+                    RaisePropertyChanged(nameof(Respositories));
+                }
+            }
+        }
 
         /// <summary>
         ///  Get a resources by the resource id.
