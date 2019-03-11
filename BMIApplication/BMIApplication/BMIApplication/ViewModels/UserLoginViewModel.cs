@@ -72,7 +72,7 @@ namespace BMIApplication.ViewModels
         private void OnAccessAccount(object obj)
         {
 
-          
+            this.NavigateTo(MainPageType.DashboardType);
 
         }
 

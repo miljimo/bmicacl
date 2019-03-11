@@ -5,9 +5,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:BMIApplication.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="250" d:DesignWidth="600">
-    <Grid Margin="15">
-        <StackPanel  Grid.Column="1" Orientation="Vertical" Margin="5">
+             d:DesignHeight="350"
+             d:DesignWidth="800">
+    <Grid Margin="10">
+        <StackPanel  Grid.Column="1"
+                     Orientation="Vertical" Margin="5">
 
             <Border 
                     BorderBrush="{StaticResource SecondaryDarkColorBrush}"
@@ -22,49 +24,93 @@
                     <Border Grid.Column="0"  
                             Margin="0 0 0 15" >
                         <Grid>
-
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="8*"/>
                             </Grid.ColumnDefinitions>
 
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="35"/>
-                                <RowDefinition Height="35"/>
-                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="50"/>
                             </Grid.RowDefinitions>
-                            <Label Content="Height" Grid.Column="0" Grid.Row="0" 
-                               VerticalAlignment="Center"
-                               Margin="0"
-                               Padding="0"
-                               HorizontalAlignment="Stretch"/>
-                            <TextBox Grid.Column="1" 
-                                 Text=""
-                                 Grid.Row="0" 
-                                 HorizontalAlignment="Right"
-                                 Style="{StaticResource TextBoxStyle}"
-                          Width="100"/>
-                            <Label Content="Weight" 
-                               Margin="0"
-                               Padding="0"
-                               VerticalAlignment="Center"
-                               HorizontalAlignment="Stretch"
-                               Grid.Column="0"
-                               Grid.Row="1"/>
-                            <TextBox  Grid.Column="
-                                  1" Grid.Row="1" 
-                                  Text=""
-                                  HorizontalAlignment="Right"
-                                  Style="{StaticResource TextBoxStyle}" 
-                          Width="70"/>
+                            <Grid Grid.Column="0" Grid.Row="0"  Grid.ColumnSpan="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="35"/>
+                                    <RowDefinition Height="35"/>
+                                </Grid.RowDefinitions>
+
+                                <Label Content="Height" 
+                                   VerticalAlignment="Center"
+                                   Margin="0 0 10 0"
+                                   Padding="0"
+                                   Width="50"
+                                   Grid.Row="0" 
+                                   Grid.Column="0" 
+                                   HorizontalAlignment="Stretch"/>
+                                <TextBox 
+                                     Grid.Row="0" 
+                                     Grid.Column="1" 
+                                     Text=""
+                                     Width="50"
+                                     HorizontalAlignment="Right"
+                                     Style="{StaticResource TextBoxStyle}"/>
+
+                                <Label Content="Feet(s)" 
+                                   VerticalAlignment="Center"
+                                   Margin="5 0 5 0"
+                                   Padding="0"
+                                   Grid.Row="0" 
+                                   Grid.Column="2" 
+                                   HorizontalAlignment="Center"/>
+                                <TextBox 
+                                     Grid.Row="0" 
+                                     Grid.Column="3" 
+                                     Text=""
+                                     HorizontalAlignment="Right"
+                                     Style="{StaticResource TextBoxStyle}" Width="50"/>
+
+                                <Label Content="Inches" 
+                                   VerticalAlignment="Center"
+                                   Margin="10 0 0 0"
+                                   Padding="0"
+                                   Grid.Row="0" 
+                                   Grid.Column="4" 
+                                   HorizontalAlignment="Stretch"/>
+
+
+                                <Label 
+                                    Content="Weight" 
+                                   VerticalAlignment="Center"
+                                   Margin="0"
+                                   Padding="0"
+                                   Width="50"
+                                   Grid.Row="1" 
+                                   HorizontalAlignment="Center" />
+
+                                <TextBox 
+                                     Grid.Row="1" 
+                                     Grid.Column="1" 
+                                     Text=""
+                                     Grid.ColumnSpan="3"
+                                     HorizontalAlignment="Right"
+                                     Style="{StaticResource TextBoxStyle}" Width="140"/>
+
+                            </Grid>
 
                             <Button Content="Calculate"
                                 Grid.Column="1"
                                 Command="{Binding CalculateBMICommand}"
-                                Grid.Row="2" 
-                                HorizontalAlignment="Right"
+                                Grid.Row="1" 
+                                Height="40"
                                 Style="{StaticResource PushButtonStyle}"/>
-
                         </Grid>
                     </Border>
 

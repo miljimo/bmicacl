@@ -77,8 +77,8 @@
                 HorizontalAlignment="Left"
                 Height="40"
                 Grid.Column="1"
-                Command="{Binding AccessUserAccountCommand}"
-                Content="Access Account"/>
+                Command="{Binding CreateUserAccountCommand}"
+                Content="Create Account"/>
 
             <StackPanel Grid.Row="5" 
                     Grid.Column="1"
